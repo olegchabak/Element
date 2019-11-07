@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Каталог | Element</title>
+	<link rel="icon" href="img/header/favicon.png" type="image/x-icon" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<link rel="stylesheet" href="css/maginfic-popup.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/catalog.min.css">
+</head>
+<body>
+<header class="header">
+	<div class="contact">
+		<div class="container row align-items-center">
+			<a class="contact__address col-xs col-sm-6" href="contacts.html">г. Москва, ул. Горького, д. 123</a>
+			<div class="contact__items col-xs col-sm-6 col-md-5 col-lg-4 clo-xl-3 d-flex justify-content-between ">
+				<a href="tel:+74959999999">+7 495 999 99 99</a>
+				<a href="mailto:mail@sitename.ru">mail@sitename.ru</a>
+			</div>
+		</div>
+	</div>
+	<div class="header__main">
+		<div class="container row">
+			<a class="header__logo" href="index.html" aria-label="Ссылка на домашнюю страницу">
+				<img src="img/header/logo.png" alt="Логотип компании Элемент">
+				<span>Элемент</span>
+			</a>
+			<div class="header__navigation">
+				<nav class="navbar navbar-expand-lg navbar-light bg-transparent pr-0">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+					        aria-expanded="false" aria-label="Toggle navigation">
+						<span class="menu-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+							<a class="nav-item nav-link active">Каталог<span class="sr-only">(current)</span></a>
+							<a class="nav-item nav-link" href="about.html">О нас</a>
+							<a class="nav-item nav-link" href="galery.html">Галерея</a>
+							<a class="nav-item nav-link" href="contacts.html">Контакты</a>
+						</div>
+					</div>
+				</nav>
+				<form class="form-inline">
+					<div class="form__search">
+						<label class="search__label" for="form-search">Найти</label>
+						<input class="form-control mr-lg-2" id="form-search" type="search"
+						       placeholder="Поиск по сайту..." aria-label="Search">
+					</div>
+					<button class="btn btn-outline-secondary my-2 my-sm-1" type="submit"></button>
+				</form>
+			</div>
+		</div>
+	</div>
+</header>
+<main class="main">
+
+	<section class="hero hero--catalog">
+		<div class="container">
+			<h2 class="visually-hidden">Страница каталог товаров</h2>
+			<nav aria-label="breadcrumb bg-transparent">
+				<ol class="breadcrumb bg-transparent">
+					<li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+					<li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Промышленные материалы</li>
+				</ol>
+			</nav>
+		</div>
+	</section>
+
+	<section class="catalog">
+		<div class="container">
+			<h1 class="catalog__title">Каталог</h1>
+			<div class="catalog__wrapper">
+				<form class="catalog__filters" action="post">
+					<span class="filters__button">Разделы</span>
+					<div class="filters__wrapper">
+						<div class="filters">
+							<div class="filter">
+								<div class="filter__button filter__button--1">
+									Разделы
+								</div>
+								<ul class="filter__items filter__items--1">
+									<li><a href="#">Материалы для деревообрабатывающей промышленности</a></li>
+									<li class="active"><a href="#">Материалы для деревообрабатывающей промышленности</a>
+									</li>
+									<li><a href="#">Материалы для деревообрабатывающей промышленности</a></li>
+									<li><a href="#">Материалы для деревообрабатывающей промышленности</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</form>
+				<div class="catalog__main">
+					<form action="post" class="catalog-form">
+						<input class="catalog-form__search" type="text" name="catalog-search" required
+						       placeholder="Поиск по каталогу">
+						<button class="catalog-form__submit" type="submit">Найти</button>
+						<button class="catalog-form__show d-sm-none">Найти</button>
+					</form>
+					<ul class="main__items">
+						<li class="main__item">
+							<div class="main__inner">
+								<img class="main__image" src="img/page-catalog/item-1.jpg" alt="">
+								<p class="main__name">Название товара в каталоге в несколько строк</p>
+							</div>
+							<p class="main__brand">Brand</p>
+						</li>
+						<li class="main__item">
+							<div class="main__inner">
+								<img class="main__image" src="img/page-catalog/item-1.jpg" alt="">
+								<p class="main__name">Название товара в каталоге в несколько строк</p>
+							</div>
+							<p class="main__brand">Brand</p>
+						</li>
+						<li class="main__item">
+							<div class="main__inner">
+								<img class="main__image" src="img/page-catalog/item-1.jpg" alt="">
+								<p class="main__name">Название товара</p>
+							</div>
+							<p class="main__brand">Brand</p>
+						</li>
+						<li class="main__item">
+							<div class="main__inner">
+								<img class="main__image" src="img/page-catalog/item-1.jpg" alt="">
+								<p class="main__name">Название товара в каталоге в несколько строк</p>
+							</div>
+							<p class="main__brand">Brand</p>
+						</li>
+						<li class="main__item">
+							<div class="main__inner">
+								<img class="main__image" src="img/page-catalog/item-1.jpg" alt="">
+								<p class="main__name">Название товара в каталоге в несколько строк</p>
+							</div>
+							<p class="main__brand">Brand</p>
+						<li class="main__item">
+							<div class="main__inner">
+								<img class="main__image" src="img/page-catalog/item-1.jpg" alt="">
+								<p class="main__name">Название товара в каталоге в несколько строк</p>
+							</div>
+							<p class="main__brand">Brand</p>
+						</li>
+						<li class="main__item">
+							<div class="main__inner">
+								<img class="main__image" src="img/page-catalog/item-1.jpg" alt="">
+								<p class="main__name">Название товара в каталоге в несколько строк</p>
+							</div>
+							<p class="main__brand">Brand</p>
+						</li>
+						<li class="main__item">
+							<div class="main__inner">
+								<img class="main__image" src="img/page-catalog/item-1.jpg" alt="">
+								<p class="main__name">Название товара в каталоге в несколько строк</p>
+							</div>
+							<p class="main__brand">Brand</p>
+						</li>
+						<li class="main__item">
+							<div class="main__inner">
+								<img class="main__image" src="img/page-catalog/item-1.jpg" alt="">
+								<p class="main__name">Название товара в каталоге в несколько строк</p>
+							</div>
+							<p class="main__brand">Brand</p>
+						</li>
+					</ul>
+					<button class="catalog__button">Показать еще</button>
+				</div>
+			</div>
+			<div class="catalog__text">
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut tenetur sequi iusto doloribus iste id,
+					incidunt odit cum ullam facere eum fugit deserunt? Sunt exercitationem ab culpa incidunt cum
+					assumenda aliquid commodi id harum omnis, nam enim voluptatem quia eos aspernatur optio modi
+					voluptas debitis eveniet, perferendis eaque voluptates iusto, hic dignissimos. Enim, doloremque, at
+					cum a dignissimos ipsam sunt assumenda minima nemo, iste minus quo saepe alias temporibus magni
+					corrupti perferendis impedit! Magnam, illum, qui quaerat facere harum atque quia similique et
+					mollitia eius assumenda maxime beatae laudantium quis? Similique rem, perspiciatis quisquam tempore
+					minima iste ducimus? Odio, voluptate.</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit et quo repellendus provident,
+					aspernatur eius voluptatum suscipit mollitia facere, odit vero! Similique quidem laboriosam,
+					architecto, velit at quod ratione molestiae deserunt, eligendi optio ipsum culpa! Blanditiis sint
+					totam id. Deleniti vitae quo numquam ea ratione explicabo, magni veritatis animi rerum!</p>
+			</div>
+		</div>
+	</section>
+
+</main>
+
+<footer class="footer">
+	<div class="container">
+		<section class="questions">
+			<h2 class="questions__title">
+				<b>Есть вопросы?</b>
+				Мы вам перезвоним!</h2>
+			<form action="post" class="questions__form">
+				<input class="questions__input form__item" type="text" name="questions-name" id="questions-name">
+				<label class="questions__label" for="questions-name">Как к вам обращаться?</label>
+				<input class="questions__input form__item" type="tel" name="questions-phone" id="questions-phone">
+				<label class="questions__label questions__label--phone" for="questions-phone">Ваш номер телефона</label>
+				<button class="button button--dark form__item magnific-questions" type="submit"
+				        data-mfp-src=".questions-popup">Отправить
+				</button>
+			</form>
+		</section>
+		<section class="footer__navigation">
+			<h2 class="visually-hidden">Дополнительная навигация по сайту</h2>
+			<a href="index.html" aria-label="Ссылка на домашнюю страницу">
+				<img class="footer__logo" src="img/footer/logo-white.png" alt="Логотип компании">
+			</a>
+			<ul class="footer__nav d-flex flex-wrap justify-content-around">
+				<li><a class="active">Каталог</a></li>
+				<li><a href="about.html">О нас</a></li>
+				<li><a href="galery.html">Галерея</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
+			</ul>
+			<span class="footer__copy">Lorem ipsum</span>
+		</section>
+	</div>
+</footer>
+
+<div class="popup questions-popup mfp-hide">
+	<h2 class="popup__title">Готово!</h2>
+	<p>Совсем скоро наш менеджер свяжется с вами и ответит на все ваши вопросы.</p>
+</div>
+
+<script src="js/jquery-3.4.1.slim.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
+

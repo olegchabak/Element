@@ -1,0 +1,43 @@
+.hero
+  min-height: 300px
+  background-image: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../../img/hero/hero-bg.jpg")
+  background-repeat: no-repeat, no-repeat
+  background-position: center, left center
+  background-size: cover
+  color: white
+  padding: 60px 0 30px
+  text-align: center
+  position: relative
+  &__h1
+    color: #ffffff
+    font-size: 24px
+    font-weight: 700
+    text-transform: uppercase
+    z-index: 2
+  &__subtitle
+    margin-bottom: 24px
+
+@media (min-width: 576px)
+  .hero
+    text-align: center
+    .container
+      max-width: 400px
+    &__h1
+      margin-bottom: 20px
+
+@media (min-width: 768px)
+  .hero
+    min-height: 590px
+    background-image: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.6)), url("../img/hero/hero-bg.jpg")
+    background-size: cover
+    padding: 160px 0 110px
+    .container
+      max-width: 600px
+      padding: 0
+    &__h1
+      font-size: 50px
+      line-height: 70px
+    &__subtitle
+      font-size: 24px
+      line-height: 50px
+      margin-bottom: 80px

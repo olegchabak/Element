@@ -1,0 +1,209 @@
+.contact
+  background-color: #363636
+  color: #bababa
+  padding: 10px 0
+  &__address
+    display: inline-block
+    color: #bababa
+    margin-bottom: 10px
+    padding-left: 0
+    padding-right: 0
+    &:hover
+      color: #bababa
+      &:before,
+      &:focus
+        color: $active
+  &__address:before
+    content: "\e803"
+    font-family: "fontello"
+    margin-right: 10px
+    font-size: 18px
+  &__items
+    width: 100%
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding-left: 0
+    padding-right: 0
+    a
+      display: inline-block
+      color: #bababa
+      margin-bottom: 10px
+      &:hover,
+      &:focus
+        color: $active
+        text-decoration: none
+        outline: none
+.header
+  position: relative
+  background-color: #fff
+  &__main
+    padding: 15px 0
+    .container
+      display: flex
+      justify-content: space-between
+  &__logo
+    display: flex
+    flex-direction: column
+    img
+      width: 58px
+      height: 40px
+    span
+      font-family: "Bebas"
+      color: #000000
+      font-size: 21px
+  &__navigation
+    display: flex
+    align-items: center
+
+.navbar-toggler
+  height: 40px
+  &:hover
+    color: #fff
+    background-color: #6c757d
+    border-color: #6c757d
+  &.active
+    color: #fff
+    background-color: #000
+    .menu-icon
+      &:before
+        content: "\e802"
+
+.menu-icon
+  &:before
+    content: "\f0c9"
+    font-family: "fontello"
+.list-icon
+  &:before
+    content: "\f0ca"
+    font-family: "fontello"
+    color: white
+    background-color: #363636
+    font-size: 16px
+    padding: 3px
+    margin: 0
+    border-radius: 3px
+  &:hover
+    color: #fff
+    background-color: #6c757d
+    border-color: #6c757d
+    &:before
+      color: #363636
+      background-color: white
+.form
+  &__search
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100% !important
+    padding: 50px
+    background-color: #ffffff
+    transform: translateY(0)
+    transition: translateY 0.3s
+    z-index: -1
+    border-top: 1px solid $text-color
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5)
+    input
+      width: 100% !important
+      border: none
+      border-radius: 0
+      border-bottom: 2px solid #000
+      padding-left: 0
+      padding-right: 80px
+    &.active
+      transform: translateY(100%)
+      transition: translateY 0.3s
+      z-index: 10
+    &.active+.btn-outline-secondary
+      background-color: #000
+      color: #ffffff
+      outline: none
+      &:before
+        content: "\e802"
+      &:focus
+        box-shadow: none
+.search
+  &__label
+    position: absolute
+    right: 50px
+    top: 50%
+    transform: translateY(-50%)
+    cursor: pointer
+    font-size: 18px
+    &:after
+      content: "\e801"
+      font-family: "fontello"
+      margin-left: 10px
+.navbar-nav.active
+  position: fixed
+  top: 143px
+  right: 0
+  z-index: 9
+  background-color: #fff
+  padding: 50px 200px 100vh 80px
+  box-shadow: -5px 6px 5px 0 rgba(0, 0, 0, 0.5)
+  a
+    margin-bottom: 30px
+
+@media (min-width: 576px)
+  .contact
+    &__address
+      margin-bottom: 0
+    &__items
+      margin-top: 0
+      justify-content: flex-end
+      a
+        margin-bottom: 0
+      a+a
+        margin-left: 20px
+  .header
+    &__logo
+      flex-direction: row
+      align-items: center
+      img
+        width: 82px
+        height: 57px
+      span
+        font-size: 30px
+  .navbar-toggler
+    width: 87px
+    height: 45px
+  .form-inline .btn
+    width: 87px
+    height: 45px
+  .btn.list-icon
+    padding-top: 10px
+    width: 87px
+    height: 45px
+
+
+@media (min-width: 768px)
+  .contact
+    .container
+      justify-content: space-between
+    &__items
+      a+a
+        margin-left: 40px
+
+@media (min-width: 992px)
+  .nav-item.nav-link
+    color: $text-color
+    font-size: 16px
+    margin-right: 30px
+    position: relative
+  .nav-item.nav-link:after
+    content: ""
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 2px
+    background-color: transparent
+  .nav-item.nav-link.active:after
+    background-color: $active
+  .nav-item.nav-link:hover:after
+    background-color: $active
+  .nav-item.nav-link:focus
+    outline: none
+    &:after
+      background-color: $active

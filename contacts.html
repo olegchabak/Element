@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Контакты | Element</title>
+	<link rel="icon" href="img/header/favicon.png" type="image/x-icon"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<link rel="stylesheet" href="css/maginfic-popup.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/contacts.min.css">
+</head>
+<body>
+<header class="header">
+	<div class="contact">
+		<div class="container row align-items-center">
+			<a class="contact__address col-xs col-sm-6" href="contacts.html">г. Москва, ул. Горького, д. 123</a>
+			<div class="contact__items col-xs col-sm-6 col-md-5 col-lg-4 clo-xl-3 d-flex justify-content-between ">
+				<a href="tel:+74959999999">+7 495 999 99 99</a>
+				<a href="mailto:mail@sitename.ru">mail@sitename.ru</a>
+			</div>
+		</div>
+	</div>
+	<div class="header__main">
+		<div class="container row">
+			<a class="header__logo" href="index.html" aria-label="Ссылка на домашнюю страницу">
+				<img src="img/header/logo.png" alt="Логотип компании Элемент">
+				<span>Элемент</span>
+			</a>
+			<div class="header__navigation">
+				<nav class="navbar navbar-expand-lg navbar-light bg-transparent pr-0">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+					        aria-expanded="false" aria-label="Toggle navigation">
+						<span class="menu-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+							<a class="nav-item nav-link" href="catalog.html">Каталог<span
+									class="sr-only">(current)</span></a>
+							<a class="nav-item nav-link" href="about.html">О нас</a>
+							<a class="nav-item nav-link" href="galery.html">Галерея</a>
+							<a class="nav-item nav-link active">Контакты</a>
+						</div>
+					</div>
+				</nav>
+				<form class="form-inline">
+					<div class="form__search">
+						<label class="search__label" for="form-search">Найти</label>
+						<input class="form-control mr-lg-2" id="form-search" type="search"
+						       placeholder="Поиск по сайту..." aria-label="Search">
+					</div>
+					<button class="btn btn-outline-secondary my-2 my-sm-1" type="submit"></button>
+				</form>
+			</div>
+		</div>
+	</div>
+</header>
+<main class="main">
+
+	<section class="hero hero--contacts">
+		<div class="container">
+			<h2 class="visually-hidden">Страница контакты</h2>
+			<nav aria-label="breadcrumb bg-transparent">
+				<ol class="breadcrumb bg-transparent">
+					<li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Контакты</li>
+				</ol>
+			</nav>
+		</div>
+	</section>
+
+	<div class="contacts">
+		<div class="container">
+			<div class="contacts__wrapper">
+				<h2 class="contacts__title">Контакты</h2>
+				<div class="contacts__items">
+					<p class="contacts__item">
+						<span class="contacts__name">Адрес:</span>
+						123456, г. Москва,<br> ул. Горького, д. 123
+					</p>
+					<p class="contacts__item">
+						<span class="contacts__name">Телефон:</span>
+						<a href="tel:+74959999999">+7 495 999 99 99</a>
+						<a href="tel:+74959999999">+7 495 999 99 99</a>
+					</p>
+					<p class="contacts__item">
+						<span class="contacts__name">E-mail:</span>
+						<a href="mailto:mail@sitename.ru">mail@sitename.ru</a>
+						<a href="mailto:ask@sitename.ru">ask@sitename.ru</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="contacts__map" id="map"></div>
+	</div>
+
+</main>
+<footer class="footer">
+	<div class="container">
+		<section class="questions">
+			<h2 class="questions__title">
+				<b>Есть вопросы?</b>
+				Мы вам перезвоним!</h2>
+			<form action="post" class="questions__form">
+				<input class="questions__input form__item" type="text" name="questions-name" id="questions-name">
+				<label class="questions__label" for="questions-name">Как к вам обращаться?</label>
+				<input class="questions__input form__item" type="tel" name="questions-phone" id="questions-phone">
+				<label class="questions__label questions__label--phone" for="questions-phone">Ваш номер телефона</label>
+				<button class="button button--dark form__item magnific-questions" type="submit"
+				        data-mfp-src=".questions-popup">Отправить
+				</button>
+			</form>
+		</section>
+		<section class="footer__navigation">
+			<h2 class="visually-hidden">Дополнительная навигация по сайту</h2>
+			<a href="index.html" aria-label="Ссылка на домашнюю страницу">
+				<img class="footer__logo" src="img/footer/logo-white.png" alt="Логотип компании">
+			</a>
+			<ul class="footer__nav d-flex flex-wrap justify-content-around">
+				<li><a href="catalog.html">Каталог</a></li>
+				<li><a href="about.html">О нас</a></li>
+				<li><a href="galery.html">Галерея</a></li>
+				<li><a class="active">Контакты</a></li>
+			</ul>
+			<span class="footer__copy">Lorem ipsum</span>
+		</section>
+	</div>
+</footer>
+
+<div class="popup questions-popup mfp-hide">
+	<h2 class="popup__title">Готово!</h2>
+	<p>Совсем скоро наш менеджер свяжется с вами и ответит на все ваши вопросы.</p>
+</div>
+
+<script src="js/jquery-3.4.1.slim.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=7f30decc-d3a1-441e-9f64-c7215d37cfda&lang=ru_RU" type="text/javascript"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+@import "basic"
+@import "colors"
+@import "fonts"
+@import "slick"
+
+body
+  font-family: 'Roboto', Arial, sans-serif
+  font-size: 14px
+
+.hero
+  &--contacts
+    background-image: none
+    background-color: #fff
+    min-height: 44px
+    padding: 0
+.breadcrumb
+  padding-left: 0
+
+@media (min-width: 576px)
+  .hero
+    &--contacts
+      .container
+        margin: 0
+  .contacts
+    &--contacts
+      .container
+        padding-left: 30px
+        padding-right: 30px
+
+@media (min-width: 576px)
+  .hero
+    &--contacts
+      .container
+        padding: 0 30px
+  .contacts
+    &--contacts
+      .container
+        left: 30px
+
+@media (min-width: 992px)
+  .hero
+    &--contacts
+      .container
+        max-width: 1111px
+        margin: 0 auto

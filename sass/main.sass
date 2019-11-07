@@ -1,0 +1,107 @@
+@import "basic"
+@import "colors"
+@import "fonts"
+@import "slick"
+
+
+a
+  &:hover,
+  &:focus
+    color: $active
+    text-decoration: none
+    outline: none
+
+body
+  font-family: 'Roboto', Arial, sans-serif
+  font-size: 14px
+
+.container
+  max-width: 1111px
+  margin: 0 auto
+  padding: 0 30px
+
+.button
+  width: 254px
+  min-height: 40px
+  background-color: rgba(45, 182, 253, 0.7)
+  padding: 0 5px
+  border: none
+  color: #ffffff
+  font-size: 16px
+  text-transform: uppercase
+  cursor: pointer
+  &--dark
+    border: 1px solid #ffffff
+    background-color: rgba(256, 256, 256, 0.1)
+    width: 100%
+  &:hover,
+  &:focus
+    background-color: rgba(45, 182, 253, 1)
+  &--black
+    background-color: #363636
+    &:hover,
+    &:focus
+      background-color: #dedede
+      color: #363636
+.button-link
+  display: block
+  width: 259px
+  height: 40px
+  border: 1px solid #67b6fc
+  background-color: #d5f0fe
+  color: #363636
+  font-size: 16px
+  text-transform: uppercase
+  text-align: center
+  line-height: 40px
+  cursor: pointer
+  margin: 0 auto
+  margin-top: 70px
+  &:hover,
+  &:focus
+    color: #fff
+    background-color: rgba(45, 182, 253, 1)
+    text-decoration: none
+
+
+.form-inline .btn
+  &:before
+    content: "\e801"
+    font-family: "fontello"
+
+.navbar-toggler
+  border-color: #363636 !important
+
+.btn
+  border-color: #363636
+  height: 40px
+  &:focus
+    outline: 0
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25)
+
+.line
+  display: block
+  width: 100%
+  height: 1px
+  background-color: #363636
+
+@media (min-width: 576px)
+  .button-link
+    width: 350px
+
+@media (min-width: 768px)
+  .button
+    width: 350px
+    &--dark
+      width: 33%
+  .button-link
+    width: 350px
+    margin-top: 0
+
+@import "popups"
+@import "blocks/header"
+@import "blocks/hero"
+@import "blocks/materials"
+@import "blocks/about"
+@import "blocks/contacts"
+@import "blocks/footer"

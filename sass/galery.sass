@@ -1,0 +1,72 @@
+@import "basic"
+@import "colors"
+@import "fonts"
+@import "slick"
+
+body
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 14px
+
+.hero
+  &--galery
+    background-image: none;
+    background-color: #fff
+    min-height: 44px
+    padding: 0
+
+.breadcrumb
+  padding-left: 0
+
+.galery
+  &__title
+    text-align: center
+    color: #333333
+    font-size: 30px
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 50px
+  &__items
+    list-style-type: none
+    margin: 0
+    padding: 0
+  &__item
+    width: 100%
+    margin-bottom: 10px
+    background-color: #eeeeee
+    font-size: 0
+    img
+      width: 100%
+      object-fit: cover
+
+@media (min-width: 576px)
+  .hero
+    &--galery
+      .container
+        max-width: 1111px
+
+@media (min-width: 768px)
+  .hero
+    &--galery
+      padding: 0 30px
+  .galery
+    &__items
+      text-align: center
+      margin-left: -10px
+      margin-right: -10px
+    &__item
+      display: inline-block
+      width: 49%
+      padding: 10px
+      background-color: #fff
+
+@media (min-width: 992px)
+  .galery
+    &__item
+      max-width: 33%
+  .container
+    padding-left: 50px
+    padding-right: 50px
+  .hero--galery
+    padding: 0
+    .container
+      padding: 0 50px

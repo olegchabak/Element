@@ -1,0 +1,310 @@
+@import "basic"
+@import "colors"
+@import "fonts"
+@import "slick"
+
+body
+  font-family: 'Roboto', Arial, sans-serif
+  font-size: 14px
+
+.hero
+  &--catalog
+    background-image: none
+    background-color: #fff
+    min-height: 44px
+    padding: 0
+
+.breadcrumb
+  padding-left: 0
+
+.catalog
+  text-align: center
+  &__title
+    text-align: left
+    color: $text-color
+    font-family: Roboto
+    font-size: 30px
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 35px
+  &__button
+    width: 258px
+    height: 40px
+    background-color: #363636
+    border: 1px solid transparent
+    color: #ffffff
+    font-size: 16px
+    font-weight: 400
+    text-transform: uppercase
+    cursor: pointer
+    &:hover,
+    &:focus
+      background-color: #ffffff
+      color: #363636
+      border-color: #363636
+  &__main
+    margin-bottom: 100px
+    position: relative
+  &__text
+    text-align: left
+    font-size: 14px
+    font-weight: 400
+    line-height: 24px
+    margin-bottom: 100px
+  &__filters
+    text-align: left
+    margin-bottom: 20px
+
+.main
+  &__items
+    list-style-type: none
+    margin: 0
+    padding: 0
+  &__item
+    display: flex
+    flex-direction: column
+    padding: 0 10px
+    text-align: left
+    margin: 0 auto
+    margin-bottom: 40px
+    width: 258px
+  &__inner
+    flex-grow: 1
+  &__image
+    width: 100%
+    height: 258px
+    background-color: #eeeeee
+    object-fit: cover
+  &__name
+    font-size: 16px
+    font-weight: 700
+    color: $text-color
+    letter-spacing: -0.16px
+    line-height: 20px
+    margin-bottom: 5px
+  &__brand
+    display: block
+    font-size: 14px
+    font-weight: 400
+    color: $text-color
+    margin-bottom: 15px
+  &__price
+    color: #68b8fc
+    font-size: 20px
+    font-weight: 700
+
+.filters
+  list-style-type: none
+  margin: 0
+  padding: 0
+  &__wrapper
+    display: none
+  &__button
+    display: inline-block
+    width: 45%
+    height: 41px
+    line-height: 41px
+    font-weight: bold
+    text-align: center
+    border: 1px solid #363636
+    text-transform: uppercase
+    background-color: transparent
+    color: $text-color
+    font-size: 14px
+    cursor: pointer
+
+
+.filters__button--open+.filters__wrapper
+  display: block
+  padding-top: 20px
+
+.filter
+  &__button
+    width: 100%
+    background-color: #ffffff
+    border: none
+    text-align: left
+    border-bottom: 1px solid #bababa
+    padding: 13px 20px 13px 0
+    color: #363636
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    position: relative
+    margin-bottom: 19px
+  &__items
+    list-style-type: none
+    margin: 0
+    padding: 0
+    li
+      padding: 10px
+      a
+        color: $text-color
+      input
+        display: none
+    .active
+      background-color: #d5f0ff
+  &__button--open
+    border-color: #2db6fd
+    &:after
+      transform: rotate(-270deg)
+      transition: 0.3s
+  &__label
+    margin-bottom: 0
+    &:before
+      content: "\f096"
+      display: inline-block
+      width: 17px
+      font-family: "fontello"
+      font-size: 18px
+      margin-right: 7px
+
+.filter__input:checked+.filter__label:before
+  width: 17px
+  content: "\e804"
+
+.filter__button--open+.filter__items
+  display: block
+
+.catalog-form
+  display: flex
+  &__show
+    position: absolute
+    width: 45%
+    height: 40px
+    border: 1px solid #363636
+    background-color: transparent
+    color: $text-color
+    font-size: 14px
+    font-weight: 400
+    font-size: 0
+    top: -61px
+    right: 0
+    &:before
+      content: "\e801"
+      font-family: "fontello"
+      font-size: 18px
+  &__search
+    display: none
+    min-width: 190px
+    flex-grow: 1
+    height: 41px
+    background-color: #fff
+    border: 1px solid #363636
+    padding: 0 21px
+    color: $text-color
+    line-height: 40px
+    border-right: none
+    border-radius: 0px
+  &__submit
+    display: none
+    min-width: 66px
+    height: 41px
+    border: 1px solid #363636
+    background-color: #fff
+    font-size: 0
+    cursor: pointer
+    &:before
+      content: "\e801"
+      font-family: "fontello"
+      font-size: 18px
+    &:hover,
+    &:focus
+      color: white
+      background-color: $active
+
+.catalog-form__search.open
+  display: block
+.catalog-form__search.open~.catalog-form__show
+  background-color: $text-color
+  color: white
+.catalog-form__search.open~.catalog-form__show:before
+  content: "\e802"
+.catalog-form__submit.open
+  display: block
+
+@media (min-width: 576px)
+  .hero
+    &--catalog
+      .container
+        max-width: 1111px
+  .filters
+    &__button
+      width: auto
+      min-width: 100px
+      &--open
+        width: 50%
+    &__wrapper
+      width: 50%
+  .catalog-form
+    &__search
+      display: block
+      position: absolute
+      top: -61px
+      left: 110px
+      width: calc(100vw - 236px)
+    &__submit
+      display: block
+      position: absolute
+      top: -61px
+      right: 0
+  .main
+    &__items
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+  .catalog
+    &__button
+      width: 100%
+
+@media (min-width: 768px)
+  .hero
+    &--catalog
+      padding: 0 30px
+  .catalog
+    &__wrapper
+      display: flex
+    &__filters
+      width: 205px
+      max-width: 205px
+      flex-shrink: 0
+      margin-right: 34px
+    &__main
+      flex-grow: 1
+  .catalog-form
+    margin-bottom: 30px
+    &__submit
+      position: relative
+      top: 0
+      left: 0
+    &__search
+      position: relative
+      top: 0
+      left: 0
+      width: auto
+  .filters
+    &__button
+      display: none
+    &__wrapper
+      display: block
+      width: 100%
+  .main
+    &__item
+      width: 206px
+    &__image
+      height: 206px
+
+@media (min-width: 992px)
+  .hero--catalog
+    padding: 0
+    .container
+      padding: 0 30px
+  .catalog
+    &__filters
+      width: 250px
+      max-width: 250px
+  .main
+    &__item
+      width: 255px
+    &__image
+      height: 255px

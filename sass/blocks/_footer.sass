@@ -1,0 +1,120 @@
+.footer
+  background-color: $text-color
+  color: white
+  padding: 60px 0 50px
+  text-align: center
+  &__logo
+    margin: 40px 0 55px
+  &__nav
+    text-align: center
+    list-style-type: none
+    margin: 0
+    padding: 0
+    li
+      margin: 0 15px 30px
+      a
+        color: #ffffff
+        font-size: 16px
+        font-weight: 400
+        &:hover,
+        &:focus
+          color: $active
+          text-decoration: none
+          outline: none
+        &.active
+          color: $active !important
+          text-decoration: none
+          outline: none
+  &__copy
+    display: block
+    margin-top: 40px
+    color: #bababa
+    &:before
+      content: "\f1f9"
+      font-family: 'fontello'
+      margin-right: 10px
+.questions
+  border-bottom: 1px solid #565656
+  &__title
+    font-size: 22px
+    font-weight: 400
+    line-height: 30px
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 20px
+    b
+      display: block
+  &__form
+    width: 260px
+    margin: 0 auto
+    margin-bottom: 60px
+  &__input
+    width: 100%
+    background: transparent
+    border: none
+    border-bottom: 2px solid #ffffff
+    line-height: 30px
+    color: #ffffff
+    outline: none
+    border-radius: 0px
+    &:focus
+      border-color: $active
+    &:focus+.questions__label,
+    &.fill+.questions__label
+      font-size: 12px
+      transform: translateY(-55px)
+      transition: 0.5s
+  &__label
+    display: block
+    color: #bababa
+    font-size: 16px
+    font-weight: 400
+    top: 10px
+    text-align: left
+    transform: translateY(-30px)
+    transition: 0.5s
+
+@media (min-width: 576px)
+  .questions
+    &__title
+      font-size: 30px
+      line-height: 40px
+      margin-bottom: 60px
+    &__form
+      width: 360px
+@media (min-width: 768px)
+  .questions
+    &__form
+      width: 100%
+      display: flex
+      position: relative
+    &__label
+      position: absolute
+      top: 40px
+      left: 0
+      &--phone
+        left: 35%
+    input
+      margin-right: 30px
+  .form
+    &__item
+      width: 33%
+  .footer
+    &__nav
+      padding: 0 10%
+
+
+@media (min-width: 992px)
+  .questions
+    &__label
+      &--phone
+        left: 34.5%
+    input
+      margin-right: 30px
+  .form
+    &__item
+      width: 33%
+  .footer
+    &__nav
+      padding: 0 15%
+

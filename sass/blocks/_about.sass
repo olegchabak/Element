@@ -1,0 +1,50 @@
+.about
+  background-color: $section-bgc
+  padding: 60px 0 0
+  color: $text-color
+  .container
+    padding-left: 40px
+    padding-right: 40px
+  &__title
+    font-size: 24px
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 30px
+  &__text
+    line-height: 24px
+    margin-bottom: 30px
+  &__link
+    color: $text-color
+    &:after
+      content: "\e800"
+      font-family: "fontello"
+      font-size: 10px
+      margin-left: 5px
+  &__image
+    width: 100%
+    margin-top: 60px
+
+@media (min-width: 576px)
+  .about
+    &__image
+      height: 548px
+      object-fit: cover
+
+@media (min-width: 768px)
+  .about
+    &__image
+      height: 668px
+    &__title
+      font-size: 30px
+
+@media (min-width: 992px)
+  .about
+    display: flex
+    padding: 0
+    &__image
+      margin: 0
+      min-width: 500px
+    .container
+      order: 1
+      padding: 70px 70px 70px 110px
+
